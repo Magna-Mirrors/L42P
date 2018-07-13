@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Scheduler.core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Scheduler.core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GetLineResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineInfo" nillable="true" type="tns:Line" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLineResponse" nillable="true" type="tns:GetLineResponse" />
+  <xs:complexType name="Line">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerOderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerOderIdRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramId" type="xs:int" />
+      <xs:element minOccurs="0" name="QueuedMinutes" type="xs:float" />
+      <xs:element minOccurs="0" name="ReOrderPercentThreshold" type="xs:float" />
+      <xs:element minOccurs="0" name="ScheduleFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchedulerMethod" type="tns:SchedulerMethods" />
+      <xs:element minOccurs="0" name="SelectCmd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCount" type="xs:float" />
+      <xs:element minOccurs="0" name="WC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WcfFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkBufferMinutes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Line" nillable="true" type="tns:Line" />
+  <xs:simpleType name="SchedulerMethods">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="MdbAndPlanFiles" />
+      <xs:enumeration value="MsSql" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SchedulerMethods" nillable="true" type="tns:SchedulerMethods" />
+  <xs:complexType name="GetLinesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lines" nillable="true" type="tns:ArrayOfLine" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLinesResponse" nillable="true" type="tns:GetLinesResponse" />
+  <xs:complexType name="ArrayOfLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Line" nillable="true" type="tns:Line" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLine" nillable="true" type="tns:ArrayOfLine" />
+  <xs:complexType name="GetPlanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineData" nillable="true" type="tns:Line" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPlanRequest" nillable="true" type="tns:GetPlanRequest" />
+  <xs:complexType name="GetPlanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlanData" nillable="true" type="tns:ArrayOfPlanItem" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPlanResponse" nillable="true" type="tns:GetPlanResponse" />
+  <xs:complexType name="ArrayOfPlanItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlanItem" nillable="true" type="tns:PlanItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlanItem" nillable="true" type="tns:ArrayOfPlanItem" />
+  <xs:complexType name="PlanItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuildID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Built" type="xs:int" />
+      <xs:element minOccurs="0" name="Chk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustOrderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Flags" type="tns:OrderFlags" />
+      <xs:element minOccurs="0" name="HHMM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoadTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MMDDYY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="Ordered" type="xs:int" />
+      <xs:element minOccurs="0" name="PPHPP" type="xs:float" />
+      <xs:element minOccurs="0" name="PartId" type="xs:int" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" type="xs:long" />
+      <xs:element minOccurs="0" name="QTY" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Shipdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" type="tns:PlanStatus" />
+      <xs:element minOccurs="0" name="TargetLineId" type="xs:int" />
+      <xs:element minOccurs="0" name="Truck" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanItem" nillable="true" type="tns:PlanItem" />
+  <xs:simpleType name="OrderFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Truck" />
+          <xs:enumeration value="C" />
+          <xs:enumeration value="Flag2" />
+          <xs:enumeration value="Flag3" />
+          <xs:enumeration value="RequiresCustomerOrderId" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="OrderFlags" nillable="true" type="tns:OrderFlags" />
+  <xs:simpleType name="PlanStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Suspended" />
+      <xs:enumeration value="Planed" />
+      <xs:enumeration value="Scheduled" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Removed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlanStatus" nillable="true" type="tns:PlanStatus" />
+  <xs:complexType name="SavePlanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastLoadTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LineData" nillable="true" type="tns:Line" />
+      <xs:element minOccurs="0" name="PlanData" nillable="true" type="tns:ArrayOfPlanItem" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SavePlanRequest" nillable="true" type="tns:SavePlanRequest" />
+  <xs:complexType name="TransactionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionResult" nillable="true" type="tns:TransactionResult" />
+  <xs:complexType name="ValidatePartsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineData" nillable="true" type="tns:Line" />
+      <xs:element minOccurs="0" name="Parts" nillable="true" type="tns:ArrayOfPart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidatePartsRequest" nillable="true" type="tns:ValidatePartsRequest" />
+  <xs:complexType name="ArrayOfPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Part" nillable="true" type="tns:Part" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPart" nillable="true" type="tns:ArrayOfPart" />
+  <xs:complexType name="Part">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Part" nillable="true" type="tns:Part" />
+  <xs:complexType name="ValidatePartsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parts" nillable="true" type="tns:ArrayOfPart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidatePartsResponse" nillable="true" type="tns:ValidatePartsResponse" />
+  <xs:complexType name="GetPartsForLineRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineData" nillable="true" type="tns:Line" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPartsForLineRequest" nillable="true" type="tns:GetPartsForLineRequest" />
+  <xs:complexType name="getPartsforLineResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parts" nillable="true" type="tns:ArrayOfPart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getPartsforLineResponse" nillable="true" type="tns:getPartsforLineResponse" />
+  <xs:complexType name="GetNextOrderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetNextOrderRequest" nillable="true" type="tns:GetNextOrderRequest" />
+  <xs:complexType name="GetNextOrderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Item" nillable="true" type="tns:PlanItem" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetNextOrderResult" nillable="true" type="tns:GetNextOrderResult" />
+  <xs:complexType name="SkipOrderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lineid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkipOrderRequest" nillable="true" type="tns:SkipOrderRequest" />
+  <xs:complexType name="SkipOrderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Item" nillable="true" type="tns:PlanItem" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkipOrderResult" nillable="true" type="tns:SkipOrderResult" />
+  <xs:complexType name="RemoveOrderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveOrderRequest" nillable="true" type="tns:RemoveOrderRequest" />
+  <xs:complexType name="RemoveOrderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveOrderResult" nillable="true" type="tns:RemoveOrderResult" />
+  <xs:complexType name="GetScheduleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetScheduleRequest" nillable="true" type="tns:GetScheduleRequest" />
+  <xs:complexType name="GetScheduleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfPlanItem" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetScheduleResult" nillable="true" type="tns:GetScheduleResult" />
+</xs:schema>

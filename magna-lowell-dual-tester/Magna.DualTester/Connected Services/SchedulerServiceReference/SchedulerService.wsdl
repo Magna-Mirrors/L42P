@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SchedulerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8045/SchedulerService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8045/SchedulerService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8045/SchedulerService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Scheduler.core" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="iSchedulerService_GetLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLine" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLines" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlan" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_SavePlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlan" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_SavePlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_ValidatePlanItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePlanItems" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_ValidatePlanItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePlanItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetpartsForLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetpartsForLine" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetpartsForLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetpartsForLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetNextOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextOrder" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetNextOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_SkipThisorder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SkipThisorder" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_SkipThisorder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SkipThisorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_RemoveThisorder_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveThisorder" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_RemoveThisorder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveThisorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetLineSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineSchedule" />
+  </wsdl:message>
+  <wsdl:message name="iSchedulerService_GetLineSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineScheduleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="iSchedulerService">
+    <wsdl:operation name="GetLine">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetLine" message="tns:iSchedulerService_GetLine_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetLineResponse" message="tns:iSchedulerService_GetLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLines">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetLines" message="tns:iSchedulerService_GetLines_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetLinesResponse" message="tns:iSchedulerService_GetLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlan">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetPlan" message="tns:iSchedulerService_GetPlan_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetPlanResponse" message="tns:iSchedulerService_GetPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlan">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/SavePlan" message="tns:iSchedulerService_SavePlan_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/SavePlanResponse" message="tns:iSchedulerService_SavePlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePlanItems">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/ValidatePlanItems" message="tns:iSchedulerService_ValidatePlanItems_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/ValidatePlanItemsResponse" message="tns:iSchedulerService_ValidatePlanItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetpartsForLine">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetpartsForLine" message="tns:iSchedulerService_GetpartsForLine_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetpartsForLineResponse" message="tns:iSchedulerService_GetpartsForLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextOrder">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetNextOrder" message="tns:iSchedulerService_GetNextOrder_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetNextOrderResponse" message="tns:iSchedulerService_GetNextOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SkipThisorder">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/SkipThisorder" message="tns:iSchedulerService_SkipThisorder_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/SkipThisorderResponse" message="tns:iSchedulerService_SkipThisorder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveThisorder">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/RemoveThisorder" message="tns:iSchedulerService_RemoveThisorder_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/RemoveThisorderResponse" message="tns:iSchedulerService_RemoveThisorder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSchedule">
+      <wsdl:input wsam:Action="http://tempuri.org/iSchedulerService/GetLineSchedule" message="tns:iSchedulerService_GetLineSchedule_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/iSchedulerService/GetLineScheduleResponse" message="tns:iSchedulerService_GetLineSchedule_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_iSchedulerService" type="tns:iSchedulerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLine">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLines">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlan">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlan">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/SavePlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePlanItems">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/ValidatePlanItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetpartsForLine">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetpartsForLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextOrder">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetNextOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipThisorder">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/SkipThisorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveThisorder">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/RemoveThisorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSchedule">
+      <soap:operation soapAction="http://tempuri.org/iSchedulerService/GetLineSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchedulerService">
+    <wsdl:port name="BasicHttpBinding_iSchedulerService" binding="tns:BasicHttpBinding_iSchedulerService">
+      <soap:address location="http://localhost:8045/SchedulerService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

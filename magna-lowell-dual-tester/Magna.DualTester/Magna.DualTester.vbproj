@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD923658-F986-469C-A7C7-66F1FDFC3CD2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Magna.DualTester.My.MyApplication</StartupObject>
+    <RootNamespace>Magna.DualTester</RootNamespace>
+    <AssemblyName>Magna.DualTester</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AssemblyVersion>1.0.2015.175</AssemblyVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.8.8.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Magna.DualTester.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Magna.DualTester.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Magna.DualTester.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Magna.DualTester.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomatedSolutions.ASComm, Version=3.9.0.0, Culture=neutral, PublicKeyToken=67272fe3f372ded3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\references\AutomatedSolutions.ASComm.dll</HintPath>
+    </Reference>
+    <Reference Include="FlexCell, Version=4.4.0.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls\FlexCell.dll</HintPath>
+    </Reference>
+    <Reference Include="Magna.DualTester.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\references\Magna.DualTester.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Magna.DualTester.Plc.Core">
+      <HintPath>..\..\..\..\Documents\references\Magna.DualTester.Plc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\..\..\Documents\references\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\..\Documents\references\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AppSettings.vb" />
+    <Compile Include="Bindings.vb" />
+    <Compile Include="Connected Services\SchedulerServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ICfgNonDomino.vb" />
+    <Compile Include="Interfaces\IPlcFullRepo.vb" />
+    <Compile Include="Interfaces\IShell.vb" />
+    <Compile Include="LoadingDialog.Designer.vb">
+      <DependentUpon>LoadingDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Plan.vb" />
+    <Compile Include="Models\Udt_Order.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Interfaces\IPrint.vb" />
+    <Compile Include="TesterApi\Udt_Activity.vb" />
+    <Compile Include="TesterApi\Udt_AlgItem.vb" />
+    <Compile Include="TesterApi\Udt_AnalogItems.vb" />
+    <Compile Include="TesterApi\Udt_GlassOptions.vb" />
+    <Compile Include="TesterApi\Udt_HeartBeat.vb" />
+    <Compile Include="TesterApi\Udt_LgBuffCntrl.vb" />
+    <Compile Include="TesterApi\Udt_LogItem.vb" />
+    <Compile Include="TesterApi\Udt_LogReq.vb" />
+    <Compile Include="TesterApi\Udt_Logvalues.vb" />
+    <Compile Include="TesterApi\Udt_Manual_Operators.vb" />
+    <Compile Include="TesterApi\Udt_Mcal.vb" />
+    <Compile Include="TesterApi\Udt_MinMax.vb" />
+    <Compile Include="TesterApi\Udt_Nest.vb" />
+    <Compile Include="TesterApi\Udt_Opt_Item.vb" />
+    <Compile Include="TesterApi\Udt_OrderInfo.vb" />
+    <Compile Include="TesterApi\Udt_partInformation.vb" />
+    <Compile Include="TesterApi\Udt_PartOptions.vb" />
+    <Compile Include="TesterApi\Udt_Printer.vb" />
+    <Compile Include="TesterApi\Udt_Scale.vb" />
+    <Compile Include="TesterApi\Udt_Setpoints.vb" />
+    <Compile Include="TesterApi\Udt_tester.vb" />
+    <Compile Include="TesterApi\Udt_Tester_Counts.vb" />
+    <Compile Include="TesterApi\Udt_User.vb" />
+    <Compile Include="TesterApi\Udt_UserStatus.vb" />
+    <Compile Include="Tools\AsTest.vb" />
+    <Compile Include="Tools\BarcodeService.vb" />
+    <Compile Include="Tools\BitTools.vb" />
+    <Compile Include="Tools\CfgTool.vb" />
+    <Compile Include="Tools\CurrentOrderManager.vb" />
+    <Compile Include="Tools\Debug\DebugAsConnection.vb" />
+    <Compile Include="Tools\Debug\DebugCfgTool.vb" />
+    <Compile Include="Models\NonDominoCfg.vb" />
+    <Compile Include="Tools\Debug\FakeBarcodeScanner.vb" />
+    <Compile Include="Tools\Debug\FakeBarcodeScannerInput.Designer.vb">
+      <DependentUpon>FakeBarcodeScannerInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Debug\FakeBarcodeScannerInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\PlcDataRepo.vb" />
+    <Compile Include="Tools\PrintService.vb" />
+    <Compile Include="Tools\PrnFileRepo.vb" />
+    <Compile Include="Tools\ScheduleServiceFactory.vb" />
+    <Compile Include="Tools\StringDefaults.vb" />
+    <Compile Include="UI\Dialogs\DialogColorSelector.Designer.vb">
+      <DependentUpon>DialogColorSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogColorSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogGetStr.Designer.vb">
+      <DependentUpon>DialogGetStr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogGetStr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogStringEdit.Designer.vb">
+      <DependentUpon>DialogStringEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogStringEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\PnAndQtyEdit.Designer.vb">
+      <DependentUpon>PnAndQtyEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\PnAndQtyEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\ReprintDialog.Designer.vb">
+      <DependentUpon>ReprintDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ReprintDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\ActuatorViewModel.vb" />
+    <Compile Include="UI\Views\Calibration\SubViews\AreUSureAlgCfg.Designer.vb">
+      <DependentUpon>AreUSureAlgCfg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\AreUSureAlgCfg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\CalibrationItemDisplay.Designer.vb">
+      <DependentUpon>CalibrationItemDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\CalibrationItemDisplay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\CalibrationSubViewModel.vb" />
+    <Compile Include="UI\Views\Calibration\SubViews\TesterDevicesUserControl.Designer.vb">
+      <DependentUpon>TesterDevicesUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\TesterDevicesUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\TesterDevicesViewModel.vb" />
+    <Compile Include="UI\Views\Calibration\SubViews\UcCoordinateViewModel.vb" />
+    <Compile Include="UI\Views\Calibration\SubViews\Uc_Coordinate.Designer.vb">
+      <DependentUpon>Uc_Coordinate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\Uc_Coordinate.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\LoadingStatus.Designer.vb">
+      <DependentUpon>LoadingStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\LoadingStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestDataControlViewModel.vb" />
+    <Compile Include="UI\Views\MainView\SubViews\NestPartOptions.Designer.vb">
+      <DependentUpon>NestPartOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestPartOptions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\OrdersView\ViewOrders.Designer.vb">
+      <DependentUpon>ViewOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\OrdersView\ViewOrders.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Settings\LineModel.vb" />
+    <Compile Include="UI\Views\Settings\SubViews\ViewApplicationParameters.Designer.vb">
+      <DependentUpon>ViewApplicationParameters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Settings\SubViews\ViewApplicationParameters.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Settings\SubViews\ViewApplicationParametersViewModel.vb" />
+    <Compile Include="UI\Views\Settings\SubViews\ViewShiftSetup.Designer.vb">
+      <DependentUpon>ViewShiftSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Settings\SubViews\ViewShiftSetup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Settings\ApplicationSettingsView.Designer.vb">
+      <DependentUpon>ApplicationSettingsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Settings\ApplicationSettingsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\ActuatorUserControl.Designer.vb">
+      <DependentUpon>ActuatorUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\ActuatorUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\CalibrationSubUserControl.Designer.vb">
+      <DependentUpon>CalibrationSubUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\SubViews\CalibrationSubUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\ValueDialog.Designer.vb">
+      <DependentUpon>ValueDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ValueDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogCountEdit.Designer.vb">
+      <DependentUpon>DialogCountEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogCountEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestDataControl.Designer.vb">
+      <DependentUpon>NestDataControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestDataControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestOptionsUserControl.Designer.vb">
+      <DependentUpon>NestOptionsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\MainView\SubViews\NestOptionsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\ViewCalibration.Designer.vb">
+      <DependentUpon>ViewCalibration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Calibration\ViewCalibration.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\MainView\ViewMainUserOverView.Designer.vb">
+      <DependentUpon>ViewMainUserOverView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\MainView\ViewMainUserOverView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Setpoints\ViewTesterSetpoints.Designer.vb">
+      <DependentUpon>ViewTesterSetpoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Setpoints\ViewTesterSetpoints.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Settings\SubViews\ViewShiftSetupViewModel.vb" />
+    <Compile Include="UI\Views\ViewPrintSetup.Designer.vb">
+      <DependentUpon>ViewPrintSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\ViewPrintSetup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingDialog.resx">
+      <DependentUpon>LoadingDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Debug\FakeBarcodeScannerInput.resx">
+      <DependentUpon>FakeBarcodeScannerInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DialogColorSelector.resx">
+      <DependentUpon>DialogColorSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DialogGetStr.resx">
+      <DependentUpon>DialogGetStr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DialogStringEdit.resx">
+      <DependentUpon>DialogStringEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\PnAndQtyEdit.resx">
+      <DependentUpon>PnAndQtyEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\ReprintDialog.resx">
+      <DependentUpon>ReprintDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\AreUSureAlgCfg.resx">
+      <DependentUpon>AreUSureAlgCfg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\CalibrationItemDisplay.resx">
+      <DependentUpon>CalibrationItemDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\TesterDevicesUserControl.resx">
+      <DependentUpon>TesterDevicesUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\Uc_Coordinate.resx">
+      <DependentUpon>Uc_Coordinate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\LoadingStatus.resx">
+      <DependentUpon>LoadingStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\MainView\SubViews\NestPartOptions.resx">
+      <DependentUpon>NestPartOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\OrdersView\ViewOrders.resx">
+      <DependentUpon>ViewOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Settings\SubViews\ViewApplicationParameters.resx">
+      <DependentUpon>ViewApplicationParameters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Settings\SubViews\ViewShiftSetup.resx">
+      <DependentUpon>ViewShiftSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Settings\ApplicationSettingsView.resx">
+      <DependentUpon>ApplicationSettingsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\ActuatorUserControl.resx">
+      <DependentUpon>ActuatorUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\SubViews\CalibrationSubUserControl.resx">
+      <DependentUpon>CalibrationSubUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\ValueDialog.resx">
+      <DependentUpon>ValueDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DialogCountEdit.resx">
+      <DependentUpon>DialogCountEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\MainView\SubViews\NestDataControl.resx">
+      <DependentUpon>NestDataControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\MainView\SubViews\NestOptionsUserControl.resx">
+      <DependentUpon>NestOptionsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Calibration\ViewCalibration.resx">
+      <DependentUpon>ViewCalibration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\MainView\ViewMainUserOverView.resx">
+      <DependentUpon>ViewMainUserOverView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\Setpoints\ViewTesterSetpoints.resx">
+      <DependentUpon>ViewTesterSetpoints.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Views\ViewPrintSetup.resx">
+      <DependentUpon>ViewPrintSetup.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.GetLineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.GetLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.GetNextOrderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.getPartsforLineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.GetPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.GetScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.RemoveOrderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.SkipOrderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.TransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\Magna.DualTester.SchedulerServiceReference.ValidatePartsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\SchedulerService.wsdl" />
+    <None Include="Connected Services\SchedulerServiceReference\SchedulerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\SchedulerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SchedulerServiceReference\SchedulerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\ColorModel.datasource" />
+    <None Include="My Project\DataSources\DualTester.Data.EnglishSpanishMap.datasource" />
+    <None Include="My Project\DataSources\DualTester.UI.Views.MainView.SubViews.MirrorMotionItem.datasource" />
+    <None Include="My Project\DataSources\LineModel.datasource" />
+    <None Include="My Project\DataSources\Plan.datasource" />
+    <None Include="My Project\DataSources\PrintCfg.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SchedulerServiceReference\SchedulerService.disco" />
+    <None Include="Connected Services\SchedulerServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\SchedulerServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\SchedulerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Turn_Signal.png" />
+    <None Include="Resources\GroundCheck.png" />
+    <None Include="Resources\defog.png" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw04dn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw04lt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw04rt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw04up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw06dn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw06lt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw06rt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arw06up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CR.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtrSymb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LED.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightoff.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lighton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RubberStamp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SECUR02A.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SECUR02B.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINEWAVE.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SOL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ARWDWN.ICO" />
+    <Content Include="Resources\ARWLeft.ICO" />
+    <Content Include="Resources\ARWRight.ICO" />
+    <Content Include="Resources\ARWUP.ICO" />
+    <Content Include="Resources\bullet_green.png" />
+    <Content Include="Resources\bullet_red.png" />
+    <Content Include="Resources\bullet_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SchedulerServiceReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

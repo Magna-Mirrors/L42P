@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Magna.DualTester.TesterApi.Udt_Activity" Collapsed="true">
+    <Position X="4.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAABAAAAAAAAAAAACAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>TesterApi\Udt_Activity.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_AlgItem" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAgABAAgAA=</HashCode>
+      <FileName>TesterApi\Udt_AlgItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_AnalogItems" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQQABAAEAABAARQAAAABAAIAEABgCAACAAAAAABgA=</HashCode>
+      <FileName>TesterApi\Udt_AnalogItems.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_GlassOptions" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkAAAAIAAAAAAAAADAAEAAABDgAAAAAAAAAAAAAQEA=</HashCode>
+      <FileName>TesterApi\Udt_GlassOptions.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_HeartBeat" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_HeartBeat.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_LgBuffCntrl" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_LgBuffCntrl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_LogItem" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_LogItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_LogReq" Collapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_LogReq.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Logvalues" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgIQyABAgABAABYBQwAEAECIKGEAAgCAAGAGAAAgBgA=</HashCode>
+      <FileName>TesterApi\Udt_Logvalues.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Manual_Operators" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAABBAEAAAALQwgCBQAEAABAAIAAAAAAAAAAAABE=</HashCode>
+      <FileName>TesterApi\Udt_Manual_Operators.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Mcal" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAA=</HashCode>
+      <FileName>TesterApi\Udt_Mcal.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_MinMax" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_MinMax.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Nest" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAQECQBAgAAAQAIAABAgAAAAADQCACAEACAQ=</HashCode>
+      <FileName>TesterApi\Udt_Nest.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Opt_Item" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_Opt_Item.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_OrderInfo" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAgAA=</HashCode>
+      <FileName>TesterApi\Udt_OrderInfo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_PartInformation" Collapsed="true">
+    <Position X="1.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAEACQAAQAGAAASAAQEAgAAAQAAAACAAMCGAMAA=</HashCode>
+      <FileName>TesterApi\Udt_partInformation.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_PartOptions" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgCAAAAAMAQAAIAwUAAIAAIAAAAIAQQAkAAgASACAE=</HashCode>
+      <FileName>TesterApi\Udt_PartOptions.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Printer" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_Printer.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Scale" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAQAgAAAAAAIhAAAAAAA=</HashCode>
+      <FileName>TesterApi\Udt_Scale.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Setpoints" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQgBAAhAAJDBCgAASAMAkCIAgACAAEAQBAAAAAEQA=</HashCode>
+      <FileName>TesterApi\Udt_Setpoints.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_tester" Collapsed="true">
+    <Position X="3.5" Y="4" Width="3.5" />
+    <Members>
+      <Field Name="LogActivityRequest" Hidden="true" />
+      <Field Name="LogSetpointChange" Hidden="true" />
+      <Field Name="Nest2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIABpQAAAgAAABIAAIAAAAQAACAIAgACKiAAAEACACA=</HashCode>
+      <FileName>TesterApi\Udt_tester.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Daq_Hb" />
+      <Field Name="ActivityLogQueItem" />
+      <Field Name="ActivityToBuffer" />
+      <Field Name="CalibrationChange" />
+      <Field Name="Counts" />
+      <Field Name="FindPartReq" />
+      <Field Name="LogActivityRequest" />
+      <Field Name="LogBuffer" />
+      <Field Name="LogCalibrationEvent" />
+      <Field Name="LogSetpointChange" />
+      <Field Name="Nest1" />
+      <Field Name="Nest2" />
+      <Field Name="PartInfo" />
+      <Field Name="User" />
+      <Field Name="SetPoints" />
+      <Field Name="Printer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_Tester_Counts" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAACAA=</HashCode>
+      <FileName>TesterApi\Udt_Tester_Counts.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_User" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAMAABAAAAEAQAAAAQAAAAAAAAAAAgAFAACAQA=</HashCode>
+      <FileName>TesterApi\Udt_User.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magna.DualTester.TesterApi.Udt_UserStatus" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIACAAAAAAgCAABBEAQAAAQQAAAAABAEBAAAAEAA=</HashCode>
+      <FileName>TesterApi\Udt_UserStatus.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
