@@ -6,5 +6,6 @@ Namespace TesterApi
         Public Request As Integer
         Public Pass As Integer
         Public Fail As Integer
+        Public Nest As Integer 
     End Class
 End Namespace

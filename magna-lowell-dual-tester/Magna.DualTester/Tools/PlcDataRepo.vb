@@ -67,7 +67,9 @@ Public Class PlcDataRepo
                                                                       {"$SHIFTCOUNT$", _plc.TesterData.Counts.ShiftPassCount.ToString()},
                                                                       {"$PACKER$", _plc.TesterData.User.ClockNumber.ToString()},
                                                                        {"$TXT$", _plc.TesterData.PartInfo.Static_Label.ToString()},
-                                                                       {"$QTY$", _plc.TesterData.PartInfo.PartsPerTote.ToString()}}
+                                                                       {"$QTY$", _plc.TesterData.PartInfo.PartsPerTote.ToString()},
+                                                                       {"$NEST$", _plc.TesterData.Printer.Nest.ToString()}}
+
         End Get
     End Property
 
